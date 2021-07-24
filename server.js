@@ -1,6 +1,7 @@
 const express = require('express')
 const mysql = require('mysql')
 const myconnection = require('express-myconnection')
+const routes = require('./routes')
 
 const dbConfig = {
     host: 'localhost',
@@ -18,7 +19,7 @@ app.use(myconnection(mysql, dbConfig, 'single'))
 app.get('/', (req, res) => {
     res.send('Prueba de API')
 })
-
+app.use('/api', routes)
 
 //listen
 app.listen(app.get('port'), () => {
