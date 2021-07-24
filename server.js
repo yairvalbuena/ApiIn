@@ -8,7 +8,7 @@ const dbConfig = {
     port: 3306,
     user: 'root',
     password: '',
-    database: 'ventasDB'
+    database: 'ventasdb'
 }
 
 const app = express()
